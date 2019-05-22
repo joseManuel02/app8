@@ -18,8 +18,8 @@ function refrescarUbicacion(){
 <!--se escribe un mapa con la localizacion anterior-->
 <div id="demo"></div>
 <div id="mapholder"></div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AlzaSyDFd0aiE5FttY8XRAFI9ecTSpgo2vP-qMk"></script>
- 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFd0aiE5FttY8XRAFI9ecTSpgo2vP-qMk"></script>
+
  <button onClick="cargarmap()">Cargar Mapa</button>
  <script type="text/javascript">
  var x=document.getElementById("demo");
@@ -35,7 +35,7 @@ mapholder.style.height ='500px' ;
 mapholder.style.width ='750px' ;
   var myOptions={
   center :latlon,zoom :17,
-  mapTypeId :google.maps.MapTypeld.ROADMAP,
+  mapTypeId :google.maps.MapTypeId.ROADMAP,
   mapTypeControl :false,
    navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
    };
@@ -50,14 +50,14 @@ mapholder.style.width ='750px' ;
    x.innerHTML="Denegada la peticion de Geolocalizacion en el navegador."
    break;
    case errorPOSITION_UNAVAILABLE:
-   x.innerHTML="La informaci6n de la localizacion no esta disponible."
+   x.innerHTML="La informacion de la localizacion no esta disponible."
   break;
   case error.TIMEOUT:
  x.innerHTML="El tiempo de peticion ha expirado."
   break;
  case error.UNKNOWN ERROR:
    x.innerHTML="Ha ocurrido un error desconocido."
-   break:
+   break;
 }
   }}
  </script>
